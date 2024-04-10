@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "0e5529c4-43bd-4079-bccd-76ffff57b014",
+		"name": "sello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34172426"
+	},
+	"item": [
+		{
+			"name": "get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lKzNAZ21haWwuY29tIiwiaWQiOjQsImlhdCI6MTcxMjY5MjgwOSwiZXhwIjoxNzEyNzc5MjA5fQ.nsN95YcNsidSMkzXez7zMEkC7IeJA_NsQVAd8bVYAtA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe+1@gmail.com\",\r\n    \"password\": \"12312123132aA!\",\r\n    \"phoneNumber\": \"+48123123123\",\r\n    \"shirtSize\": 30,\r\n    \"preferredTechnology\": \"react\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list directory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lKzVAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTcxMjY5MTQzNywiZXhwIjoxNzEyNzc3ODM3fQ.nz1yYTq35CMliPw8XLNUJHIrr1Z61Pef6FDzW0NhW_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/storage/list/asd/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"storage",
+						"list",
+						"asd",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create directory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lKzVAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTcxMjY5MTQzNywiZXhwIjoxNzEyNzc3ODM3fQ.nz1yYTq35CMliPw8XLNUJHIrr1Z61Pef6FDzW0NhW_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe+1@gmail.com\",\r\n    \"password\": \"12312123132aA!\",\r\n    \"phoneNumber\": \"+48123123123\",\r\n    \"shirtSize\": 30,\r\n    \"preferredTechnology\": \"react\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/storage/create-directory/asd/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"storage",
+						"create-directory",
+						"asd",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lKzVAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTcxMjY5MTQzNywiZXhwIjoxNzEyNzc3ODM3fQ.nz1yYTq35CMliPw8XLNUJHIrr1Z61Pef6FDzW0NhW_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/19mar/Videos/NVIDIA/GeForce NOW/Kingdom Come Deliverance/video.mp4"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/storage/upload/asd/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"storage",
+						"upload",
+						"asd",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lKzVAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTcxMjY5MTQzNywiZXhwIjoxNzEyNzc3ODM3fQ.nz1yYTq35CMliPw8XLNUJHIrr1Z61Pef6FDzW0NhW_E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/19mar/Desktop/test.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/storage/file/asd/test/diagram1.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"storage",
+						"file",
+						"asd",
+						"test",
+						"diagram1.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john.doe+5@gmail.com\",\r\n    \"password\": \"12312123132aA!\",\r\n    \"phoneNumber\": \"+48123123123\",\r\n    \"shirtSize\": 30,\r\n    \"preferredTechnology\": \"react\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"john.doe+3@gmail.com\",\r\n    \"password\": \"12312123132aA!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
